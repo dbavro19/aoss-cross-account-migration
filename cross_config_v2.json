@@ -1,0 +1,30 @@
+{
+    "source": {
+        "host": "https://54b3hzkbgp10x1al3xd2.us-east-1.aoss.amazonaws.com",
+        "role": "arn:aws:iam::017820686195:role/ec2-admin",
+        "region": "us-east-1",
+        "account_id": "017820686195",
+        "network_policy_name": "auto-test-oss-mog-vpc",
+        "vpc_config": {
+            "vpc_id": "vpc-0307d5d04ff5ef778",
+            "subnet_ids": ["subnet-036487a361942b9c5"],
+            "security_group_ids": ["sg-02bacc4f0ea8f0b05"],
+            "vpc_endpoint_management": "CUSTOMER"
+        }
+    },
+    "target": {
+        "host": "https://1haidmynxu7dyocsn3fk.us-east-2.aoss.amazonaws.com",
+        "role": "arn:aws:iam::385563484414:role/iam-corss-account",
+        "region": "us-east-2",
+        "account_id": "385563484414",
+        "network_policy_name": "auto-target-vpc-collection"
+    },
+    "shared": {
+        "s3_bucket_name": "oss-mig-target",
+        "s3_bucket_region": "us-east-2",
+        "migration_tracker_file": "oss-mig-vpc-cross-tracker.json",
+        "max_concurrent": 3,
+        "source_cloud_watch_logs": "/aws/vendedlogs/ossmigration/srcpipelinelogs",
+        "target_cloud_watch_logs": "/aws/vendedlogs/ossmigration/targetpipelinelogs"
+    }
+}
