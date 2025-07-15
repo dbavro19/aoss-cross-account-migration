@@ -98,7 +98,7 @@ class OpenSearchCrossAccountMigration:
             # Initialize credential tracking
             self.last_credential_refresh = datetime.now(timezone.utc)
             self.credential_refresh_interval = timedelta(minutes=45)  # Refresh before the 1-hour expiry
-            self.target_credentials_valid = False  # We'll always refresh when needed
+            self.target_credentials_valid = True  # We'll always refresh when needed
         else:
             # Same account, use source session
             self.target_session = self.source_session
