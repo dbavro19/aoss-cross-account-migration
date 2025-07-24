@@ -1,0 +1,20 @@
+{
+    "migration_status": [
+        {
+            "index": "index_600",
+            "checkpoint": "DELETED_DESTINATION_PIPELINE",
+            "status": "DONE",
+            "last_updated": "2025-07-20T20:58:45.020968",
+            "start_time": "2025-07-20T20:45:18.086859",
+            "src_doc": 0
+        },
+        {
+            "index": "new_try",
+            "checkpoint": "DELETED_DESTINATION_PIPELINE",
+            "status": "DONE",
+            "last_updated": "2025-07-20T21:18:12.444698",
+            "start_time": "2025-07-20T20:58:45.451607",
+            "src_doc": 20318
+        }
+    ]
+}
